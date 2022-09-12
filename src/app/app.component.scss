@@ -1,0 +1,27 @@
+nav{
+    background: var(--green);
+    box-shadow: 0px 2px 14px #00000066;
+    .left{
+        display: flex;
+        .logo-vri{
+            width: 58px;
+            background: white;
+            border-radius: 50%;
+        }
+        .texto{
+            padding-left: 10px;
+            line-height: 0;
+        }
+    }
+}
+#sistema{
+    background: var(--green) ;
+    .logo{
+        max-width: 150px;
+    }
+    .container_left{
+        display:flex;
+        align-items: center;
+    }
+
+}
