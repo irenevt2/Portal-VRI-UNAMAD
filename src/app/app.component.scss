@@ -16,12 +16,112 @@ nav{
 }
 #sistema{
     background: var(--green) ;
+    margin-top: 80px;
+    color: white;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
     .logo{
         max-width: 150px;
+        &._rigth{
+            background: white;
+            border-radius: 50%;
+            max-width: 120px;
+            padding: 5px;
+        }
     }
     .container_left{
         display:flex;
         align-items: center;
+    }
+    .container_rigth{
+        display: flex;
+        gap: 30px;
+        padding-right: 30px;
+    }
+}
+
+main{
+    background: #eefcff;
+    padding-top: 50px;
+    height: 100vh;
+}
+
+._container{
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(200px, 4fr));
+
+    --grid-layout-gap: 20px;
+    --grid-column-count: 8;
+    --grid-item--min-width: 150px;
+    --gap-count: calc(var(--grid-column-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+    --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr)
+    );
+    grid-gap: var(--grid-layout-gap);
+
+
+
+    // gap: 20px;
+    .box{
+        background: white;
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 0px 4px 6px #ded9d9;
+        text-decoration: none;
+        color: black;
+        // margin: auto;
+        text-align: center;
+        max-height: 100%;
+        // width: 200px;
+        .logo{
+            height: 100px;
+            // width: 120px;
+            img{
+                max-width: 100%;
+                max-height: 100px;
+            }
+        }
+        .nombre{
+            padding-top: 10px;
+        }
+    }
+}
+//media para desaparecer los logos de la derecha
+@media(max-width: 600px){
+   .logo._rigth{
+    display: none;
+   } 
+}
+
+._container._secondary{
+    // border-top-style: dashed;
+    margin-top:50px;
+    .box{
+        .logo{
+            height: 60px;
+            img{
+                max-width: 100%;
+                max-height: 50px;
+            }
+        }
+    }
+}
+
+._container._constancias{
+    margin-top:50px;
+    .box{
+        .logo{
+            height: 60px;
+            img{
+                max-width: 100%;
+                max-height: 50px;
+            }
+        }
     }
 
 }
