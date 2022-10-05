@@ -1,0 +1,59 @@
+._form{
+    padding-top: 8rem;
+    display: flex;
+    justify-content: center;
+    form{
+        background: white;
+        padding: 50px 40px;
+        border-radius: 15px;
+        max-width: 100%;
+        box-shadow: 0px 0px 10px #c1c1c1ad;
+
+        .logo{
+            margin: auto;
+            border-radius: 50%;
+            max-height: 100%;
+            max-width: 80px;
+            padding-bottom: 20px;
+            img{
+                max-width: 100%;
+                max-height: 80px;
+            }
+        }
+        legend{
+            text-align: center;
+            padding: 10px 0;
+            color: rgb(52, 52, 52);
+        }
+        i{
+            font-size: 25px;
+        }
+
+        .password{
+            border: none;
+            background: none;
+            padding: 0;
+        }
+    }
+}
+
+//Ancho de los inputs y boton Login
+.m-width{
+    min-width: 350px;
+}
+//Boton Login
+.btn.btn-primary{
+    padding: 12px;
+}
+
+.opciones{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    a{
+        text-decoration: none;
+        .recordar{
+        }
+    }
+}
+

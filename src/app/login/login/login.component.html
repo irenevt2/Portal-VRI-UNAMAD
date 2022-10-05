@@ -1,0 +1,31 @@
+<div class="container _form">
+  <form [formGroup]= "loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <div class="logo mb-2">
+        <img src="../../../assets/vri-logo.png" alt="logo-vri">
+    </div>
+    <div>
+        <mat-form-field class="m-width" appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input type="email" formControlName="email" matInput placeholder="Digite su e-mail">
+            <mat-icon matSuffix><i class="icon ion-ios-at"></i></mat-icon>
+          </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="m-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'"  formControlName="password" matInput placeholder="Digite su contraseña">
+            <button class="password" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <div class="opciones">
+              <a href="">Recordarme</a>
+              <a href="">Olvidé mi contraseña</a>
+          </div>
+    </div>
+    <button type="submit" class="btn btn-primary m-width">Login</button>
+  </form>
+</div>
+
+
+
